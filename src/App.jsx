@@ -2,6 +2,7 @@ import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useUser } from './context/UserContext';
 import Navbar from './components/Layout/Navbar';
+import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
 import MealScanner from './pages/MealScanner';
@@ -17,17 +18,22 @@ function App() {
   const location = useLocation();
   const { profile } = useUser();
 
-  // Show onboarding if not completed
-  if (!profile.onboarded && location.pathname !== '/onboarding') {
-    return <Navigate to="/onboarding" replace />;
+  // Route protection
+  if (!profile.onboarded && !['/onboarding', '/landing'].includes(location.pathname)) {
+    return <Navigate to="/landing" replace />;
+  }
+  
+  if (profile.onboarded && location.pathname === '/landing') {
+    return <Navigate to="/" replace />;
   }
 
-  const hideNav = ['/onboarding', '/scan'].includes(location.pathname);
+  const hideNav = ['/onboarding', '/scan', '/landing'].includes(location.pathname);
 
   return (
     <div className="app-container">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
+          <Route path="/landing" element={<Landing />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/scan" element={<MealScanner />} />
