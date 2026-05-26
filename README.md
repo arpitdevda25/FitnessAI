@@ -13,10 +13,10 @@ An AI-powered fitness web application that helps users achieve their fitness goa
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML, CSS, JavaScript / React *(update if needed)*
-* **Backend:** Node.js / Express *(update if needed)*
-* **Database:** MongoDB *(if used)*
-* **AI Integration:** OpenAI API / Gemini API *(update according to your project)*
+* **Frontend:** HTML, CSS, JavaScript / React 
+* **Backend:** Node.js / Express 
+* **Database:** MongoDB 
+* **AI Integration:** OpenAI API / Gemini API 
 
 ## 📂 Project Structure
 
@@ -71,13 +71,6 @@ API_KEY=your_api_key_here
 MONGODB_URI=your_mongodb_connection
 ```
 
-## 📸 Screenshots
-
-Add screenshots of your project here.
-
-```md
-![Home Page](./screenshots/home.png)
-```
 
 ## 🎯 Future Improvements
 
@@ -118,9 +111,10 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Developed by Arpit Devda
+Developed by Arpit Devda and Akshat Bagora
 
 GitHub: [arpitdevda25](https://github.com/arpitdevda25?utm_source=chatgpt.com)
+GitHub: [Akshat Bagora](https://github.com/akshatbagora8389-droid)
 
 ## ⭐ Support
 
